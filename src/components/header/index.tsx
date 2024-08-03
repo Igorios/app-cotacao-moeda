@@ -1,14 +1,15 @@
 import { StatusBar, Text, View } from "react-native";
 import { dataAtualFormatada, horaAtualFormatada } from "@/src/utils/DataAtual";
 import { useEffect, useState } from "react";
+import { Entypo } from '@expo/vector-icons';
+
 
 export default function Header() {
+  
   const [dataAtual, setDataAtual] = useState<String>("");
-  const [horaAtual, setHoraAtual] = useState<String>("");
   const [msgHoraAtual, setMsgHoraAtual] = useState<String>("");
+  const [colorHex, setColorHex] = useState<String>("");
  
-  console.log(msgHoraAtual);
-
   useEffect(() => {
     const horaAtual = horaAtualFormatada();
     setDataAtual(horaAtual);
@@ -17,21 +18,21 @@ export default function Header() {
 
     if (hours >= 5 && hours < 12) {
       setMsgHoraAtual("Bom dia");
+      setColorHex("#ffc800")
     } else if (hours >= 12 && hours < 18) {
       setMsgHoraAtual("Boa tarde");
+      setColorHex("#da924d");
     } else if (hours >= 18 && hours < 24) {
       setMsgHoraAtual("Boa noite");
+      setColorHex("#1414d6");
     } else {
       setMsgHoraAtual("Boa madrugada");
+      setColorHex("#03035c");
     }
   }, []);
 
-  console.log(horaAtual);
-  console.log(dataAtual);
-
   useEffect(() => {
     setDataAtual(dataAtualFormatada());
-    setHoraAtual(horaAtualFormatada());
   }, []);
 
   return (
@@ -45,7 +46,7 @@ export default function Header() {
           <Text className="text-lg text-white mb-2">{dataAtual}</Text>
         </View>
         <View>
-          <Text className="text-white">Olá mundo2</Text>
+          <Text className="text-white"><Entypo name="light-up" size={28} color={colorHex} /></Text>
         </View>
       </View>
     </>
