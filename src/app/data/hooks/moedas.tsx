@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react"
-import { MoedaInterface } from "../@types/MoedaServise";
+import { MoedaInterface } from "../@types/MoedaInterface";
 import { moedasService } from "../services/moedasService";
 
 export const useMoedas = () => {

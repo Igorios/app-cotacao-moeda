@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { Text, View } from "react-native";
 import { formataMoeda } from "@/src/utils/FormataDinheiro";
 import { useMoedas } from "@/src/app/data/hooks/moedas";
+import DetalheMoeda from "../DetalheMoeda";
 
 export default function Inicial() {
   const { moeda, getMoedas } = useMoedas();
 
-  const dados = moeda ? moeda[Object.keys(moeda)[0]] : null;
+  const dados = moeda ? moeda[Object.keys(moeda)[0]] : 0;
 
   useEffect(() => {
     getMoedas("USD");
@@ -17,7 +18,7 @@ export default function Inicial() {
       <View className="bg-bgSecondy mt-8 mx-2 rounded-md">
         <View>
           <Text className="text-start text-white pl-5 pt-4 text-xl">
-            Valor do dolar hoje:
+            Valor do dólar hoje:
           </Text>
         </View>
         <View className="w-11/12 border-b border-white pt-4 mx-auto text-center" />
@@ -26,10 +27,13 @@ export default function Inicial() {
             {formataMoeda(dados?.bid)}
           </Text>
 
-          <View className="w-2/4 border-b border-white mx-auto text-center" />
+          {/* <View className="w-2/4 border-b border-white mx-auto text-center" /> */}
 
         </View>
       </View>
+
+      <DetalheMoeda dadosMoeda={dados} />
+
     </>
   );
 }

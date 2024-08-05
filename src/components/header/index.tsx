@@ -41,7 +41,7 @@ export default function Header() {
       <View className="flex-row justify-between items-center bg-bgSecondy px-7 pt-5 pb-5">
         <View>
           <Text className="text-2xl text-white font-medium mb-2">
-            {msgHoraAtual}
+            Olá, {msgHoraAtual}!
           </Text>
           <Text className="text-lg text-white mb-2">{dataAtual}</Text>
         </View>
