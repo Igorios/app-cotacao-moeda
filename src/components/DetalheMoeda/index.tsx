@@ -21,7 +21,7 @@ export default function DetalheMoeda({ dadosMoeda }: MoedaInterface) {
         <View className="mt-4 p-5 flex-row justify-between">
 
           <View className="">
-            <Text className="text-white text-lg mb-1">Compra: {formataMoeda(dadosMoeda?.bid)}</Text>
+            <Text className="text-white text-lg mb-1">Compra: {formataMoeda(dadosMoeda?.bid)}</Text> 
             <Text className="text-white text-lg mb-1">Venda: {formataMoeda(dadosMoeda?.ask)}</Text>
             <Text className="text-white text-lg mb-1">Variação: {dadosMoeda?.varBid}</Text>
           </View>
