@@ -4,6 +4,7 @@ import { formataMoeda } from "@/src/utils/FormataDinheiro";
 import { useMoedas } from "@/src/app/data/hooks/moedas";
 import DetalheMoeda from "../DetalheMoeda";
 import Loading from "../Loading";
+import Feather from '@expo/vector-icons/Feather';
 
 export default function Inicial() {
 
@@ -31,9 +32,12 @@ export default function Inicial() {
       <>
 
         <View className="bg-bgSecondy mt-8 mx-2 rounded-md">
-          <View>
+          <View className="flex-row justify-between items-center">
             <Text className="text-start text-white pl-5 pt-4 text-xl">
               Valor do dólar hoje:
+            </Text>
+            <Text className="text-white pr-5 pt-5 text-xl">
+              <Feather name="info" size={24} color="#fff" />
             </Text>
           </View>
           <View className="w-11/12 border-b border-white pt-4 mx-auto text-center" />
