@@ -36,7 +36,7 @@ export default function Inicial() {
             <Text className="text-start text-white pl-5 pt-4 text-xl">
               Valor do dólar hoje:
             </Text>
-            <Text className="text-white pr-5 pt-5 text-xl">
+            <Text className="text-white pr-6 pt-5 text-xl">
               <Feather name="info" size={24} color="#fff" />
             </Text>
           </View>
