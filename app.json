@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.igorios.cotacao"
+      "package": "com.igorios.cotacao",
+      "versionCode": 2 
     },
     "web": {
       "bundler": "metro",
