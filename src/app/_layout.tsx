@@ -9,7 +9,7 @@ export default function RootLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: "Painel de controle",
+            title: "Home",
             headerShown:false,
             tabBarStyle: { backgroundColor: '#3E606F' },
             tabBarIcon: ({ focused }) => {
