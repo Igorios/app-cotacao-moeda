@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import { formataMoeda } from "@/src/utils/FormataDinheiro";
-import { useMoedas } from "@/src/app/data/hooks/moedas";
+import { useMoedas } from "@/src/data/hooks/moedas";
 import DetalheMoeda from "../DetalheMoeda";
 import Loading from "../Loading";
 import Feather from '@expo/vector-icons/Feather';
