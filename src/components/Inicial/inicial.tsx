@@ -12,7 +12,7 @@ export default function Inicial() {
 
   const [loading, setLoading] = useState<boolean>(true);
 
-  const dados = moeda ? moeda[Object.keys(moeda)[0]] : 0;
+  const dados: any = moeda ? moeda[Object.keys(moeda)[0]] : 0;
 
   useEffect(() => {
 

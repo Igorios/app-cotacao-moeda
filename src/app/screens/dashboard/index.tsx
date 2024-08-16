@@ -2,10 +2,22 @@ import { ScrollView, View, Text, Alert, Button, TouchableOpacity } from "react-n
 import Header from "@/src/components/Header";
 import Constants from "expo-constants";
 import * as Notifications from "expo-notifications";
+import { useMoedas } from "@/src/data/hooks/moedas";
+import { formataMoeda } from "@/src/utils/FormataDinheiro";
+import { useEffect } from "react";
 
 const statusBarHeight = Constants.statusBarHeight;
 
 export default function Dashboard() {
+
+  const { moeda, getMoedas } = useMoedas();
+
+  const dados: any = moeda ? moeda[Object.keys(moeda)[0]] : 0;
+
+  useEffect(() => {
+      getMoedas("USD");
+  }, []);
+
   Notifications.setNotificationHandler({
     handleNotification: async () => ({
       shouldShowAlert: true,
@@ -36,7 +48,7 @@ export default function Dashboard() {
     await Notifications.scheduleNotificationAsync({
       content: {
         title: "Olá galera do app!",
-        body: "Notificação do seu app de cotação!",
+        body: `Notificação do seu app de cotação! O valor do dolar hoje: ${formataMoeda(dados?.bid)}`,
       },
       trigger: {
         seconds: 5,
