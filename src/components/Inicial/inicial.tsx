@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { Alert, Text, TouchableOpacity, View } from "react-native";
 import { formataMoeda } from "@/src/utils/FormataDinheiro";
 import { useMoedas } from "@/src/data/hooks/moedas";
 import DetalheMoeda from "../DetalheMoeda";
@@ -24,6 +24,10 @@ export default function Inicial() {
     fetchData();
   }, []);
 
+  const handleExibirAtualizacao = () => {
+    Alert.alert(`Atualizado em: \n${dados?.create_date}`);
+  }
+
   return (
     <>
     {loading ? (
@@ -36,9 +40,13 @@ export default function Inicial() {
             <Text className="text-start text-white pl-5 pt-4 text-xl">
               Valor do dólar hoje:
             </Text>
-            <Text className="text-white pr-6 pt-5 text-xl">
-              <Feather name="info" size={24} color="#fff" />
-            </Text>
+
+            <TouchableOpacity onPress={handleExibirAtualizacao} >
+              <Text className="text-white pr-7 pt-5 text-xl">
+                  <Feather name="info" size={24} color="#fff" />              
+              </Text>
+            </TouchableOpacity >
+
           </View>
           <View className="w-11/12 border-b border-white pt-4 mx-auto text-center" />
           <View className="my-28">
