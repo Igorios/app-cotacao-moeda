@@ -4,13 +4,24 @@ import Constants from "expo-constants";
 import * as Notifications from "expo-notifications";
 import { useMoedas } from "@/src/data/hooks/moedas";
 import { formataMoeda } from "@/src/utils/FormataDinheiro";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { horaAtualFormatada } from "@/src/utils/DataAtual";
+
 
 const statusBarHeight = Constants.statusBarHeight;
 
 export default function Dashboard() {
 
   const { moeda, getMoedas } = useMoedas();
+
+  const [dataAtual, setDataAtual] = useState<String>("");
+
+  console.log("horario: " + dataAtual);
+  useEffect(() => {
+    const horaAtual = horaAtualFormatada();
+    setDataAtual(horaAtual);
+  }, []);
+
 
   const dados: any = moeda ? moeda[Object.keys(moeda)[0]] : 0;
 
