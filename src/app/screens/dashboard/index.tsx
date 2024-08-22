@@ -74,11 +74,16 @@ export default function Dashboard() {
           <Header />
         </View>
 
-        <Text className="text-white text-center text-lg mt-16">
-          Clique no botão para testar notificações no app
-        </Text>
+        <View className="p-10">
+          <Text className="text-white text-center text-2xl mt-10 font-semibold">
+            Seu app de cotação!!!
+          </Text>
+          <Text className="text-white text-center text-2xl mt-10 font-semibold">
+            Fique por dentro dos valores das moedas
+          </Text>
+        </View>
 
-        <View className="mt-5 flex items-center">
+        {/* <View className="mt-5 flex items-center">
             <TouchableOpacity
                 className="bg-bgSecondy p-3 rounded-lg w-80 "
                 onPress={handleCallNotification}
@@ -86,7 +91,7 @@ export default function Dashboard() {
                 <Text className="text-center text-white font-semibold">Gerar Notificação</Text>
             </TouchableOpacity>
 
-        </View>
+        </View> */}
       </ScrollView>
     </>
   );
