@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cotacao",
-    "slug": "cotacao",
+    "name": "Cotação",
+    "slug": "Cotação",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/capa.png",
