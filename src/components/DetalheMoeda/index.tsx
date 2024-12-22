@@ -1,9 +1,10 @@
+import React from "react";
 import { useEffect } from "react";
 import { Text, View } from "react-native";
 import { formataMoeda } from "@/src/utils/FormataDinheiro";
-import { MoedaInterface } from "@/src/app/data/@types/MoedaInterface";
+import { MoedaDetalhe } from "@/src/app/data/@types/MoedaDetalhe";
 
-export default function DetalheMoeda({ dadosMoeda }: MoedaInterface) {
+export default function DetalheMoeda({ dadosMoeda }: MoedaDetalhe) {
 
     useEffect(() => {
         

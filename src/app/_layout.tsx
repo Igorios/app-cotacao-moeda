@@ -1,3 +1,4 @@
+import React from "react";
 import { Tabs } from "expo-router";
 import { Entypo } from '@expo/vector-icons';
 import "../styles/global.css";

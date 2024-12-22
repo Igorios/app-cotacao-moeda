@@ -1,3 +1,4 @@
+import React from "react";
 import { StatusBar, Text, View } from "react-native";
 import { dataAtualFormatada, horaAtualFormatada } from "@/src/utils/DataAtual";
 import { useEffect, useState } from "react";
@@ -37,7 +38,7 @@ export default function Header() {
 
   return (
     <>
-      <StatusBar barStyle="light-content" backgroundColor="#3E606F" />
+      <StatusBar barStyle="light-content" backgroundColor="#193441" />
       <View className="flex-row justify-between items-center bg-bgSecondy px-7 pt-5 pb-5">
         <View>
           <Text className="text-2xl text-white font-medium mb-2">

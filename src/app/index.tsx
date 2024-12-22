@@ -10,7 +10,7 @@ export default function Index() {
   return (
     <ScrollView className="bg-bgMain" style={{ flex: 1 }}>
 
-      <View className="w-full" style={{ marginTop: statusBarHeight }}>
+      <View className="w-full">
         <Header />
       </View>
 
