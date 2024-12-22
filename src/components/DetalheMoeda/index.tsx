@@ -12,7 +12,7 @@ export default function DetalheMoeda({ dadosMoeda }: MoedaDetalhe) {
 
   return (
     <>
-      <View className="bg-bgSecondy mt-8 mx-2 rounded-md">
+      <View className="bg-bgSecondy mt-4 mx-2 rounded-md">
         <Text className="p-5 text-white font-bold text-start text-2xl">
           Detalhes da moeda:
         </Text>
