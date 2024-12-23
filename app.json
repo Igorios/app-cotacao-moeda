@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Cotação",
-    "slug": "Cotação",
-    "version": "1.0.1",
+    "slug": "cotacao",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/capa.png",
     "scheme": "myapp",
@@ -21,7 +21,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.igorios.cotacao",
-      "versionCode": 3 
+      "versionCode": 4 
     },
     "web": {
       "bundler": "metro",
