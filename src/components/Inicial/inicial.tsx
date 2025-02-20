@@ -30,7 +30,7 @@ export default function Inicial() {
   }, [selectMoeda]);
 
 
-  const calculoMoeda = (numericValue * (dados?.bid || 0)).toFixed(2);
+  const calculoMoeda = (numericValue * (dados?.bid || 0));
   
   const formatCurrency = (value: string) => {
     if (!value) return "0,00";
@@ -87,7 +87,6 @@ export default function Inicial() {
             <View className="w-11/12 border-b border-white pt-4 mx-auto text-center" />
             <View className="my-24">
               <Text className="p-5 text-white text-center text-5xl font-semibold">
-                {/* {formataMoeda(dados?.bid)} */}
                 {formataMoeda(calculoMoeda.toString())}
               </Text>
             </View>
